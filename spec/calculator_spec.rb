@@ -6,4 +6,10 @@ RSpec.describe Calculator do
       expect { Calculator.add(123) }.to raise_error(ArgumentError, 'Input must be a String')
     end
   end
+
+  context 'with empty string' do
+    it 'expect O' do
+      expect(Calculator.add('')).to eq(0)
+    end
+  end
 end
