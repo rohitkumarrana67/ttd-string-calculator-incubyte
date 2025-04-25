@@ -31,4 +31,10 @@ RSpec.describe Calculator do
     end
   end
 
+  context 'with new lines between the numbers' do
+    it 'expect the correct sum of numbers' do
+      expect(Calculator.add('1\n2,3')).to eq(6)
+    end
+  end
+
 end
