@@ -18,4 +18,11 @@ RSpec.describe Calculator do
       expect(Calculator.add('1')).to eq(1)
     end
   end
+
+  context 'with two numbers' do
+    it 'expect the correct sum of two numbers' do
+      expect(Calculator.add('1,2')).to eq(3)
+    end
+  end
+
 end
