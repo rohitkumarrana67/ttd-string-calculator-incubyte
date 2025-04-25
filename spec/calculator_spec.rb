@@ -12,4 +12,10 @@ RSpec.describe Calculator do
       expect(Calculator.add('')).to eq(0)
     end
   end
+
+  context 'with one number' do
+    it 'expect the same number' do
+      expect(Calculator.add('1')).to eq(1)
+    end
+  end
 end
