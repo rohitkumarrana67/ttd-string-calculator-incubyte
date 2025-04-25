@@ -33,7 +33,16 @@ RSpec.describe Calculator do
 
   context 'with new lines between the numbers' do
     it 'expect the correct sum of numbers' do
-      expect(Calculator.add('1\n2,3')).to eq(6)
+      expect(Calculator.add("1\n2,3")).to eq(6)
+    end
+  end
+
+  context 'with different delimiters' do
+    it 'expect the correct sum of numbers with delimiter is ;' do
+      expect(Calculator.add("//;\n1;2")).to eq(3)
+    end
+    it 'expect the correct sum of numbers with delimiter is &' do
+      expect(Calculator.add("//&\n1&2&3")).to eq(6)
     end
   end
 
