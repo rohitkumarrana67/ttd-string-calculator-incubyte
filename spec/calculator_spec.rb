@@ -25,4 +25,10 @@ RSpec.describe Calculator do
     end
   end
 
+  context 'with multiple numbers' do
+    it 'expect the correct sum of multiple numbers' do
+      expect(Calculator.add('1,2,3')).to eq(6)
+    end
+  end
+
 end
